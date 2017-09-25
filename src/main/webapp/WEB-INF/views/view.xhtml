@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+
+<f:view
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+>
+	<h:head />
+	<h:body>
+		<h:form>
+		
+		<p:panel id="basic" header="#{i18n['HeaderMessage']}" style="margin-bottom:20px">
+        	<h:panelGrid columns="2" cellpadding="10">
+        		<p:outputLabel for="k1" value="Тип транспортного засобу:" />
+        		<p:selectOneMenu id="k1" style="width:125px" autocomplete="off">
+        			<f:selectItem itemLabel="" itemValue="0" />
+            		<f:selectItems value="#{mainBean.osago.k1}" />
+            		<f:ajax event="change" execute="@this" listener="#{mainBean.listener}" render="resultValue" />
+        		</p:selectOneMenu>
+            	
+            	<p:outputLabel for="k2" value="Місце реєстрації:" />
+        		<p:selectOneMenu id="k2" style="width:125px" autocomplete="off">
+        			<f:selectItem itemLabel="" itemValue="0" />
+            		<f:selectItems value="#{mainBean.osago.k2}" />
+            		<f:ajax event="change" execute="@this" listener="#{mainBean.listener}" render="resultValue" />
+        		</p:selectOneMenu>
+        		
+        		<p:outputLabel for="k3" value="Сфера використання:" />
+        		<p:selectOneMenu id="k3" style="width:125px" autocomplete="off">
+        			<f:selectItem itemLabel="" itemValue="0" />
+            		<f:selectItems value="#{mainBean.osago.k3}" />
+            		<f:ajax event="change" execute="@this" listener="#{mainBean.listener}" render="resultValue" />
+        		</p:selectOneMenu>
+        		
+        		<p:outputLabel for="k4" value="Водійський стаж та франшиза:" />
+        		<p:selectOneMenu id="k4" style="width:125px" autocomplete="off">
+        			<f:selectItem itemLabel="" itemValue="0" />
+            		<f:selectItems value="#{mainBean.osago.k4}" />
+            		<f:ajax event="change" execute="@this" listener="#{mainBean.listener}" render="resultValue" />
+        		</p:selectOneMenu>
+        		
+        		<p:outputLabel for="k5" value="Період використання трансп.засобу:" />
+        		<p:selectOneMenu id="k5" style="width:125px" autocomplete="off">
+        			<f:selectItem itemLabel="" itemValue="0" />
+            		<f:selectItems value="#{mainBean.osago.k5}" />
+            		<f:ajax event="change" execute="@this" listener="#{mainBean.listener}" render="resultValue" />
+        		</p:selectOneMenu>
+            	
+            	<p:outputLabel for="k6" value="Спроби шахрайства:" />
+        		<p:selectOneMenu id="k6" style="width:125px" autocomplete="off">
+        			<f:selectItem itemLabel="" itemValue="0" />
+            		<f:selectItems value="#{mainBean.osago.k6}" />
+            		<f:ajax event="change" execute="@this" listener="#{mainBean.listener}" render="resultValue" />
+        		</p:selectOneMenu>
+            	
+            	<p:outputLabel for="k7" value="Коефіцієнт короткостроковості:" />
+        		<p:selectOneMenu id="k7" style="width:125px" autocomplete="off">
+        			<f:selectItem itemLabel="" itemValue="0" />
+            		<f:selectItems value="#{mainBean.osago.k7}" />
+            		<f:ajax event="change" execute="@this" listener="#{mainBean.listener}" render="resultValue" />
+        		</p:selectOneMenu>
+        		
+        		<p:outputLabel for="kBM" value="Бонус-Малус:" />
+        		<p:selectOneMenu id="kBM" style="width:125px" autocomplete="off">
+        			<f:selectItem itemLabel="" itemValue="0" />
+            		<f:selectItems value="#{mainBean.osago.kBM}" />
+            		<f:ajax event="change" execute="@this" listener="#{mainBean.listener}" render="resultValue" />
+        		</p:selectOneMenu>
+        		
+        		<p:outputLabel for="kPark" value="Парк ТЗ:" />
+        		<p:selectOneMenu id="kPark" style="width:125px" autocomplete="off">
+        			<f:selectItem itemLabel="" itemValue="0" />
+            		<f:selectItems value="#{mainBean.osago.kPark}" />
+            		<f:ajax event="change" execute="@this" listener="#{mainBean.listener}" render="resultValue" />
+        		</p:selectOneMenu>
+        		
+        		<p:outputLabel for="kPrivileges" value="Пільги:" />
+        		<p:selectOneMenu id="kPrivileges" style="width:125px" autocomplete="off">
+        			<f:selectItem itemLabel="" itemValue="0" />
+            		<f:selectItems value="#{mainBean.osago.kPrivileges}" />
+            		<f:ajax event="change" execute="@this" listener="#{mainBean.listener}" render="resultValue" />
+        		</p:selectOneMenu>
+        		
+        		<h4><p:outputLabel id="resultValue" value="Результат: #{mainBean.resultMessage}" /></h4>
+            	
+        	</h:panelGrid>
+    	</p:panel>
+		</h:form>
+		
+	</h:body>
+</f:view>
